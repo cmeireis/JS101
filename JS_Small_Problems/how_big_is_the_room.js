@@ -26,4 +26,9 @@
       1.  Store in areaOfRoom variable.
     6.  Log to console `The area of the room is ${areaOfRoom} square meters (${areaOfRoom * 10.76})`
   Code */
-  
+
+const readlineSync = require('readline-sync');
+let lengthInMeters = readlineSync.question('Enter the length of the room in meters: ');
+let widthInMeters = readlineSync.question('Enter the width of the room in meters: ');
+let areaOfRoom = lengthInMeters * widthInMeters;
+console.log(`The area of the room is ${areaOfRoom} square meters (${(areaOfRoom * 10.7639).toFixed(2)} square feet).`);
