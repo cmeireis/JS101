@@ -23,5 +23,18 @@
   6.  Assign tipAmount + billAmount to totalPayment.
   7.  Output to console `The tip is $${tipAmount.toFixed(2)}`
   8.  Output to console `The total is $${totalPayment.toFixed(2)}`
-Code
+Code */
+
+const readlinesync = require('readline-sync');
+
+let billAmount = readlinesync.question('What is the amount of the bill?');
+let tipPercentage = readlinesync.question('What is the tip percentage?');
+let tipAmount = (billAmount * (tipPercentage * .01));
+let totalPayment = Number(tipAmount) + Number(billAmount);
+
+console.log(`The tip is $${tipAmount.toFixed(2)}`);
+console.log(`The total is $${totalPayment.toFixed(2)}`);
+
+
+
 
